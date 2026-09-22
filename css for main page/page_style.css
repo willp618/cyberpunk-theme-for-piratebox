@@ -1,0 +1,557 @@
+/* ==========================================================================
+   PirateBox — CYBERCORE skin
+   All original selectors/IDs are preserved so scripts.js and index.html
+   keep working untouched. Only the visual language has changed.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --void:        #05070b;
+  --panel:       #0b1119;
+  --panel-edge:  #131b26;
+  --grid-line:   rgba(0, 240, 255, 0.06);
+  --cyan:        #00f0ff;
+  --magenta:     #ff2e88;
+  --amber:       #f4c542;
+  --acid:        #39ff88;
+  --text-hi:     #d8f4ff;
+  --text-mid:    #7d94a8;
+  --text-low:    #45566a;
+  --danger:      #ff3b5c;
+  --font-head:   'Orbitron', 'Segoe UI', sans-serif;
+  --font-body:   'Share Tech Mono', 'Consolas', monospace;
+}
+
+* {
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, object, iframe, fieldset {
+  border: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+header, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+
+legend {
+  display: none;
+}
+
+body {
+  color: var(--text-hi);
+  font-family: var(--font-body);
+  font-size: 100%;
+  background-color: var(--void);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    radial-gradient(ellipse at 20% 0%, rgba(0, 240, 255, 0.08), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, rgba(255, 46, 136, 0.07), transparent 55%);
+  background-size: 42px 42px, 42px 42px, cover, cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* faint scanline overlay, purely decorative, sits above the background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  z-index: 999;
+}
+
+::selection {
+  background: var(--magenta);
+  color: var(--void);
+}
+
+/* scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--panel);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--panel-edge);
+  border: 1px solid var(--cyan);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan);
+}
+
+h1 {
+  font-family: var(--font-head);
+  font-size: 1em;
+  font-weight: 800;
+  line-height: auto;
+  margin: 0;
+  color: var(--cyan);
+}
+
+h2 {
+  font-family: var(--font-head);
+  font-size: 1.2em;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.6em;
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.45);
+  border-bottom: 1px solid var(--panel-edge);
+  padding-bottom: 0.5em;
+}
+
+h3 {
+  font-family: var(--font-head);
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: auto;
+  margin: 0 0 0.5em;
+  color: var(--text-mid);
+}
+
+p {
+  font-size: 0.95em;
+  font-weight: normal;
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  color: var(--text-mid);
+}
+
+a {
+  color: var(--magenta);
+  text-decoration: none;
+  transition: color 0.15s ease, text-shadow 0.15s ease;
+}
+
+a:hover {
+  color: var(--cyan);
+  text-shadow: 0 0 6px rgba(0, 240, 255, 0.7);
+  text-decoration: none;
+}
+
+.current {
+  color: var(--cyan);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+#top-nav a {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  margin: 0;
+  color: var(--text-mid);
+}
+#top-nav a:hover,
+#top-nav a.current {
+  color: var(--cyan);
+}
+
+input {
+  font-family: var(--font-body);
+  font-size: .8em;
+  background: var(--panel);
+  color: var(--text-hi);
+  border: 1px solid var(--panel-edge);
+}
+input:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.35);
+}
+input::placeholder {
+  color: var(--text-low);
+}
+
+label {
+  color: var(--text-hi);
+  font-size: .72em;
+  font-family: var(--font-body);
+}
+
+footer {
+  color: var(--text-mid);
+}
+
+.message date {
+  font-size: .625em;
+  color: var(--text-low);
+}
+.message name {
+  font-size: .75em;
+  font-weight: bold;
+  color: var(--cyan);
+}
+.message data {
+  font-size: .75em;
+  color: var(--text-hi);
+}
+
+.red {
+  color: var(--danger);
+}
+
+.green {
+  color: var(--acid);
+}
+
+.blue {
+  color: var(--cyan);
+}
+
+.orange {
+  color: var(--amber);
+}
+
+header, footer {
+  background: var(--panel);
+  border-bottom: 1px solid var(--panel-edge);
+}
+footer {
+  border-top: 1px solid var(--panel-edge);
+  border-bottom: 0;
+}
+header img, footer img {
+  vertical-align: bottom;
+}
+
+#logo {
+  background-image: url('./piratebox-logo-horizontal-white.png');
+  width: 215px;
+  height: 36px;
+  float: left;
+  overflow: hidden;
+  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.65));
+}
+
+#menu-icon {
+  background-image: url('./menu.png');
+  float: right;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  filter: invert(70%) sepia(80%) saturate(2000%) hue-rotate(140deg) brightness(1.1);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#top-nav {
+  clear: both;
+  display: none;
+  padding: 1em 0 0 0;
+}
+
+#thanks {
+  float: right;
+}
+
+#upload iframe {
+  border: 1px solid var(--panel-edge);
+  border-radius: 2px;
+  margin: 0 0 1em;
+  filter: invert(1) hue-rotate(180deg);
+  background: var(--panel);
+}
+
+#shoutbox {
+  height: 350px;
+  overflow: auto;
+  width: 100%;
+  background: var(--void);
+  border: 1px solid var(--panel-edge);
+  border-radius: 2px;
+  margin: 0 0 1em;
+  padding: 0.75em;
+}
+#shoutbox .message {
+  margin: 0 0 .3em 0;
+  border-bottom: 1px dashed var(--panel-edge);
+  padding-bottom: .3em;
+}
+
+#shoutbox-input {
+  margin: 0 0 1em 0;
+}
+#shoutbox-input .nickname,
+#shoutbox-input .message,
+#shoutbox-input .button {
+  width: 100%;
+}
+
+#shoutbox-options label {
+  float: left;
+  overflow: hidden;
+  border: 1px solid var(--panel-edge);
+  border-radius: 2px;
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.5em 1em;
+  background: var(--panel);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+#shoutbox-options label:hover {
+  border-color: var(--cyan);
+}
+#shoutbox-options label input {
+  margin: 0 .5em 0 0;
+}
+#shoutbox-options .bg-black {
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1px var(--text-low);
+}
+#shoutbox-options .bg-blue {
+  background: rgba(0, 240, 255, 0.08);
+  box-shadow: inset 0 0 0 1px var(--cyan);
+}
+#shoutbox-options .bg-green {
+  background: rgba(57, 255, 136, 0.08);
+  box-shadow: inset 0 0 0 1px var(--acid);
+}
+#shoutbox-options .bg-orange {
+  background: rgba(244, 197, 66, 0.1);
+  box-shadow: inset 0 0 0 1px var(--amber);
+}
+#shoutbox-options .bg-red {
+  background: rgba(255, 59, 92, 0.1);
+  box-shadow: inset 0 0 0 1px var(--danger);
+}
+
+input {
+  height: 3em;
+  border: 1px solid var(--panel-edge);
+  border-radius: 2px;
+  margin: 0 0 1em;
+  padding: 0 0.5em;
+}
+
+input[type=radio] {
+  height: 1.3em;
+  margin: 0 .5em 0 0;
+  accent-color: var(--cyan);
+}
+
+.button {
+  background: transparent;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  font-family: var(--font-head);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: rgba(0, 240, 255, 0.1);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+}
+
+.button:active {
+  background: var(--cyan);
+  color: var(--void);
+  -webkit-box-shadow: 0 0 16px rgba(0, 240, 255, 0.8);
+  -moz-box-shadow: 0 0 16px rgba(0, 240, 255, 0.8);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.8);
+}
+
+.button:disabled {
+  border-color: var(--text-low);
+  color: var(--text-low);
+  cursor: default;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: 2px;
+  position: relative;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.5);
+  margin: 0 0 1em;
+  padding: 1em;
+}
+
+/* corner accent notch, echoes a HUD panel without touching layout */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid var(--magenta);
+  border-left: 2px solid var(--magenta);
+  pointer-events: none;
+}
+
+.container {
+  height: 100%;
+  padding: 1em;
+  width: 100%;
+}
+
+.list table {
+  width: 100%;
+}
+.list table thead {
+  text-align: left;
+  color: var(--cyan);
+  font-family: var(--font-head);
+  font-size: 0.75em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.list table tbody tr {
+  height: 2em;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--panel-edge);
+}
+.list table tbody tr:hover {
+  background: rgba(0, 240, 255, 0.06);
+}
+.list table .m, .list table .s, .list table .t {
+  display: none;
+}
+
+@media screen and (min-width: 801px) {
+  #logo {
+    margin: 0 2em 0 0;
+  }
+
+  #menu-icon {
+    display: none;
+  }
+
+  #top-nav {
+    clear: none;
+    display: table-cell;
+    padding: 0;
+    vertical-align: middle;
+  }
+  #top-nav ul li {
+    float: left;
+  }
+  #top-nav ul li a {
+    margin: 0 1em 0 0;
+    padding: 0;
+  }
+
+  #sidebar {
+    float: right;
+    width: 40%;
+  }
+
+  #main {
+    float: left;
+    padding: 0 1em 0 0;
+    width: 60%;
+  }
+
+  #shoutbox-input .nickname {
+    float: left;
+    margin: 0 1em 0 0;
+    width: 20%;
+  }
+  #shoutbox-input .message {
+    float: left;
+    margin: 0 1em 0 0;
+    width: 60%;
+  }
+  #shoutbox-input .button {
+    float: right;
+    margin: 0;
+    width: 15%;
+  }
+
+  .to-top {
+    display: none;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+  }
+
+  .list table .m,
+  .list table .s,
+  .list table .t {
+    display: table-cell;
+  }
+}
+
+/*
+Progress bar, restyled from the original Bootstrap-derived rule set:
+https://github.com/twbs/bootstrap (MIT license)
+*/
+
+.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: var(--void);
+    border: 1px solid var(--panel-edge);
+    border-radius: 2px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.progress-bar {
+    float: left;
+    width: 0px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--void);
+    text-align: center;
+    background-color: var(--cyan);
+    background-image: linear-gradient(90deg, var(--cyan), var(--magenta));
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+    transition: width 0.6s ease 0s;
+}
