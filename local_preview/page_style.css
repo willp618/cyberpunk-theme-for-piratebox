@@ -204,34 +204,52 @@ footer {
   color: var(--text-mid);
 }
 
+/* Defaults only - no color here. A ".message name { color: ... }" rule is
+   MORE specific than a single ".blue"/".red" class, so it would silently
+   beat whatever color the chat's color picker applied. Color lives only in
+   the .red/.green/.blue/.orange rules below. */
+date {
+  color: var(--text-low);
+}
+name {
+  color: var(--cyan);
+}
+data {
+  color: var(--text-hi);
+}
 .message date {
   font-size: .625em;
-  color: var(--text-low);
 }
 .message name {
   font-size: .75em;
   font-weight: bold;
-  color: var(--cyan);
 }
 .message data {
   font-size: .75em;
-  color: var(--text-hi);
 }
 
-.red {
-  color: var(--danger);
+/* Chat color picker. !important + covering both possible markup patterns
+   (class on the whole .message row, or on the individual name/date/data
+   tag) so the picked color always wins - we don't have psowrte.py /
+   chat_content.html to confirm which one the backend actually does. */
+.red, .message.red name, .message.red date, .message.red data,
+name.red, date.red, data.red {
+  color: var(--danger) !important;
 }
 
-.green {
-  color: var(--acid);
+.green, .message.green name, .message.green date, .message.green data,
+name.green, date.green, data.green {
+  color: var(--acid) !important;
 }
 
-.blue {
-  color: var(--cyan);
+.blue, .message.blue name, .message.blue date, .message.blue data,
+name.blue, date.blue, data.blue {
+  color: var(--cyan) !important;
 }
 
-.orange {
-  color: var(--amber);
+.orange, .message.orange name, .message.orange date, .message.orange data,
+name.orange, date.orange, data.orange {
+  color: var(--amber) !important;
 }
 
 header, footer {
