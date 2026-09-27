@@ -10,6 +10,7 @@ this is a theme for a piratebox built using an example on the internet contains 
 - the file in the folder labled css for main page contains the main page css again it should just be a case of coping it over the current css page 
 - the folder called local preview has a preview claude made to view click on the index.html this is the claude demo talked about above 
 - ALWAYS MAKE A BACK UP OF ANY FILES YOU PLAN TO CHANGE JUST INCASE
-<img width="1919" height="882" alt="Screenshot 2026-09-22 174726" src="https://github.com/user-attachments/assets/a2d2a673-304c-4c14-8a52-c9700432cd25" />
+<img width="1919" height="877" alt="image" src="https://github.com/user-attachments/assets/158d71ae-f9c5-42fe-a457-6b86db40f89a" />
+
 - the above is a screen shot of the local preview
   
