@@ -1,0 +1,238 @@
+/* ==========================================================================
+   Kareha imageboard — CYBERCORE theme
+   Base structure follows futaba.css (the theme you use most), reskinned
+   with the same tokens as the main PirateBox page_style.css so the board
+   and the front page feel like one system.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Share+Tech+Mono&display=swap');
+
+html, body {
+	background-color: #05070b;
+	background-image:
+		linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+	background-size: 42px 42px;
+	color: #d8f4ff;
+	font-family: 'Share Tech Mono', 'Consolas', monospace;
+}
+
+a {
+	color: #ff2e88;
+}
+a:hover {
+	color: #00f0ff;
+	text-shadow: 0 0 6px rgba(0, 240, 255, 0.6);
+}
+
+.adminbar {
+	text-align: right;
+	clear: both;
+	float: right;
+	font-size: .8em;
+	color: #7d94a8;
+}
+.adminbar a {
+	font-weight: bold;
+}
+
+.logo {
+	clear: both;
+	text-align: center;
+	font-family: 'Orbitron', 'Segoe UI', sans-serif;
+	font-size: 2em;
+	font-weight: 800;
+	letter-spacing: 0.06em;
+	color: #00f0ff;
+	text-shadow: 0 0 12px rgba(0, 240, 255, 0.55);
+	width: 100%;
+}
+
+.theader {
+	background: #0b1119;
+	text-align: center;
+	padding: 4px;
+	color: #00f0ff;
+	width: 100%;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	border: 1px solid #131b26;
+	border-bottom: 2px solid #ff2e88;
+}
+
+.postarea {
+}
+
+.rules {
+	font-size: 0.7em;
+	color: #7d94a8;
+}
+
+.postblock {
+	background: #0b1119;
+	color: #d8f4ff;
+	font-weight: 800;
+	border: 1px solid #131b26;
+}
+
+.footer {
+	text-align: center;
+	font-size: 12px;
+	font-family: 'Share Tech Mono', monospace;
+	color: #45566a;
+}
+
+.passvalid {
+	background: #0b1119;
+	text-align: center;
+	width: 100%;
+	color: #39ff88;
+	border: 1px solid #131b26;
+}
+
+.dellist {
+	font-weight: bold;
+	text-align: center;
+	color: #ff3b5c;
+}
+
+.delbuttons {
+	text-align: center;
+	padding-bottom: 4px;
+}
+
+.managehead {
+	background: #131b26;
+	color: #00f0ff;
+	padding: 4px;
+	letter-spacing: 0.04em;
+}
+
+.postlists {
+	background: #0b1119;
+	width: 100%;
+	padding: 0px;
+	color: #d8f4ff;
+}
+
+.row1 {
+	background: #0b1119;
+	color: #d8f4ff;
+}
+.row2 {
+	background: #05070b;
+	color: #d8f4ff;
+}
+
+.unkfunc {
+	background: inherit;
+	color: #39ff88;
+}
+
+.filesize {
+	text-decoration: none;
+	color: #45566a;
+	font-size: .8em;
+}
+
+.filetitle {
+	background: inherit;
+	font-size: 1.2em;
+	color: #00f0ff;
+	font-weight: 800;
+	text-shadow: 0 0 6px rgba(0, 240, 255, 0.35);
+}
+
+.postername {
+	color: #ff2e88;
+	font-weight: bold;
+}
+
+.postertrip {
+	color: #f4c542;
+}
+
+.oldpost {
+	color: #ff3b5c;
+	font-weight: 800;
+}
+
+.omittedposts {
+	color: #45566a;
+}
+
+.reply {
+	background: #0b1119;
+	color: #d8f4ff;
+	border: 1px solid #131b26;
+	border-left: 2px solid #00f0ff;
+	padding: 0.5em;
+	margin: 0;
+	border-radius: 2px;
+}
+
+blockquote {
+	margin: .5em .5em .5em 1em;
+	color: #7d94a8;
+}
+blockquote p {
+	margin: 0;
+	padding: 0;
+}
+.reply blockquote {
+	margin: .5em;
+}
+
+.doubledash {
+	display: none;
+	vertical-align: top;
+	clear: both;
+	float: left;
+}
+
+.replytitle {
+	font-size: 1.2em;
+	color: #00f0ff;
+	font-weight: 800;
+	text-shadow: 0 0 6px rgba(0, 240, 255, 0.35);
+}
+
+.commentpostername {
+	color: #39ff88;
+	font-weight: 800;
+}
+
+.thumbnailmsg {
+	font-size: small;
+	color: #45566a;
+}
+
+hr {
+	border-style: solid none none none;
+	border-width: 1px;
+	border-color: #131b26;
+}
+
+table {
+	border-style: none;
+}
+table td {
+	border-style: none;
+}
+
+.nothumb {
+	background-color: #0b1119;
+	border-style: dotted;
+	border-color: #131b26;
+	margin: .3em .5em;
+}
+
+.abbrev {
+	color: #45566a;
+}
+
+.highlight {
+	background: rgba(255, 46, 136, 0.12);
+	color: #d8f4ff;
+	border: 2px dashed #ff2e88;
+}
