@@ -6,7 +6,7 @@
 #
 
 # System config
-use constant ADMIN_PASS => 'pigtails';	# Admin password. For fucks's sake, change this.
+use constant ADMIN_PASS => 'changeme';	# Admin password. For fucks's sake, change this.
 use constant SECRET => 'wur213vVPcXfOYc7e5c3RKs8breA98PMFiUzFQrrVtf2dybUAgvCsgpu85U0fIl9kLx8cGAl0vc2UsQzQMZVIe4PvbODnmWEbihI0vuH8dO1x8G8tJF_HjPEBbjFC4ON';		# Cryptographic secret. CHANGE THIS to something totally random, and long.
 use constant CAPPED_TRIPS => ('!sEqi7pwEWg'=>' ADMIN/OWNER','!!example2'=>' <em>cap</em>');	# Admin tripcode hash, for startng threads when locked down, and similar. Format is '!trip'=>'capcode', where 'capcode' is what is shown instead of the trip. This can contain HTML, but keep it valid XHTML!
 
