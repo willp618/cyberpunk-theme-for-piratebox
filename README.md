@@ -1,16 +1,17 @@
 # cyberpunk-theme-for-piratebox
-this is a theme for a piratebox built using an example on the internet contains AI code 
+- this is a cyberpunk theme made with help of AI to use copy the share folder to the usb stick being used by the piratebox Im not sure how to do this on a piratebox using just an sdcard 
+- this allows oth the main page and the chan board to have the same theme without manually editing files 
+- there is a modified station_cnt.sh file this needs to be copied to /opt/piratebox/bin/ i personally manually replaced the current station_cnt.sh line by line making sure that the format is the same 
+  this modified station_cht.sh logs mac addresses to a .txt in the tmp folder which is cleared every restart this allows the stations_cnt.sh to show how many devices have been connected since startup a useful bit of 
+  info when out in the wild and not sure if the box has had anyone connect 
+- to use you most install station_cnt.sh using sudo /opt/piratebox/bin/install_piratebox.sh /opt/piratebox/conf/piratebox.conf station_cnt after a while it should show on the homepage 
+  you then cd to /opt/piratebox/bin then sudo nano station_cnt.sh and edit line by line there are ways to copy it over but they didnt work for me with errors in the formatting
+- you should be get something like the image below 
 
-- should just need to replace the css file and the theme should work 
-- there is a theme for the chanboard this should just need adding to the chanboard css folder to show as an theme option 
-- this is AS IS AI or someone who knows html/css should be able to figure out how to get it to work from the files Claude did make a "demo" that allows you to see changes without using your P-box
-- it uses a font that is only online claude changed this so that it will fall back to the font installed on the piratebox 
-
-- the files in the folder labled files for the chan-board contain the css file as well as AI adapted files to allow MP4 and other video files to be shown again not tested on a real piratebox 
-- the file in the folder labled css for main page contains the main page css again it should just be a case of coping it over the current css page 
-- the folder called local preview has a preview claude made to view click on the index.html this is the claude demo talked about above 
 - ALWAYS MAKE A BACK UP OF ANY FILES YOU PLAN TO CHANGE JUST INCASE
-<img width="1919" height="877" alt="image" src="https://github.com/user-attachments/assets/158d71ae-f9c5-42fe-a457-6b86db40f89a" />
 
-- the above is a screen shot of the local preview
+<img width="1919" height="876" alt="image" src="https://github.com/user-attachments/assets/fc2faaf1-02c4-4a1d-af4c-7d37fa278983" />
+
+
+- the above is a screen shot of the theme installed and working on a rpi 1 piratebox 
   
