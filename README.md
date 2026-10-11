@@ -1,6 +1,6 @@
 # cyberpunk-theme-for-piratebox
 - this is a cyberpunk theme made with help of AI to use copy the share folder to the usb stick being used by the piratebox Im not sure how to do this on a piratebox using just an sdcard 
-- this allows oth the main page and the chan board to have the same theme without manually editing files 
+- this allows both the main page and the chan board to have the same theme without manually editing files 
 - there is a modified station_cnt.sh file this needs to be copied to /opt/piratebox/bin/ i personally manually replaced the current station_cnt.sh line by line making sure that the format is the same 
   this modified station_cht.sh logs mac addresses to a .txt in the tmp folder which is cleared every restart this allows the stations_cnt.sh to show how many devices have been connected since startup a useful bit of 
   info when out in the wild and not sure if the box has had anyone connect 
