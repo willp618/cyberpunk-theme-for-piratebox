@@ -4,8 +4,11 @@
 - there is a modified station_cnt.sh file this needs to be copied to /opt/piratebox/bin/ i personally manually replaced the current station_cnt.sh line by line making sure that the format is the same 
   this modified station_cht.sh logs mac addresses to a .txt in the tmp folder which is cleared every restart this allows the stations_cnt.sh to show how many devices have been connected since startup a useful bit of 
   info when out in the wild and not sure if the box has had anyone connect 
-- to use you most install station_cnt.sh using sudo /opt/piratebox/bin/install_piratebox.sh /opt/piratebox/conf/piratebox.conf station_cnt after a while it should show on the homepage 
-  you then cd to /opt/piratebox/bin then sudo nano station_cnt.sh and edit line by line there are ways to copy it over but they didnt work for me with errors in the formatting
+- to use you most install station_cnt.sh using 
+
+- sudo /opt/piratebox/bin/install_piratebox.sh /opt/piratebox/conf/piratebox.conf station_cnt 
+
+- after a while it should show on the homepage, you then cd to /opt/piratebox/bin then sudo nano station_cnt.sh and edit line by line there are ways to copy it over but they didnt work for me with errors in the formatting
 - you should be get something like the image below 
 
 - ALWAYS MAKE A BACK UP OF ANY FILES YOU PLAN TO CHANGE JUST INCASE
