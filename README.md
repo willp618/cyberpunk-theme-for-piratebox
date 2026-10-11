@@ -26,3 +26,4 @@
 
 - the above is a screen shot of the theme installed and working on a rpi 1 piratebox 
   
+- might be wondering whats the local preview this is what AI made so that i could mess with the html code without needing to turn of my pi and remove the usb stick every time 
