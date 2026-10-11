@@ -13,7 +13,9 @@
 
 - sudo /opt/piratebox/bin/install_piratebox.sh /opt/piratebox/conf/piratebox.conf station_cnt 
 
-- after a while it should show on the homepage, you then cd to /opt/piratebox/bin then sudo nano station_cnt.sh and edit line by line there are ways to copy it over but they didnt work for me with errors in the formatting
+- after a while it should show on the homepage, you then cd to /opt/piratebox/bin then sudo nano station_cnt.sh and edit line by line 
+
+- there are ways to copy it over but they didnt work for me causing errors in the formatting
 
 - you should be get something like the image below 
 
